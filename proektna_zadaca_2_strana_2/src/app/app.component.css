@@ -1,0 +1,24 @@
+body {
+    background: -webkit-gradient(linear, left top, right top,color-stop(0%, #3a1c71), color-stop(50%, #d76d77), color-stop(99%, #ffaf7b));
+}
+.navbar{
+    overflow: hidden;
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar a{
+    float: left;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    padding: 20px 25px;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    background-color: turquoise;
+}
+.no_italic{
+    font-style: normal;
+}
