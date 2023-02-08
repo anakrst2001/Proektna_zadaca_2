@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "proektna_zadaca_2_strana_1.css">
+    <title>Ana-Home page</title>
+</head>
+<body>
+  <div id="root2"></div>
+  <div id="root1"></div>
+  <div id="root"></div>
+</body>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+</script>
+<script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+const slika={
+    imageUrl:"pexels-maria-tyutina-954599.jpg",
+    alt:"Hello"
+};
+
+let App1=function Komponenta1(){
+  return(
+    <div className="navbar">
+        <a href="proektna_zadaca_2_strana_1.html">Home</a>
+        <a href="http://localhost:4200/">Favourite things</a>
+        <a href="proektna_zadaca_2_strana_3.html">Gallery</a>
+        <a href="proektna_zadaca_2_strana_4.html">Blog</a>
+        <a href="proektna_zadaca_2_strana_5.html">Form</a>
+        <a href="proektna_zadaca_2_strana_6.html">Contact</a>
+    </div>
+  );
+}
+
+let App2=function Komponenta2(){
+    return(
+        <div>
+            <img src={slika.imageUrl} alt={slika.alt}/>
+        </div>
+    );
+}
+
+let App3=function Komponenta3(){
+    return(
+        <div>
+            <p>Hi, my name is Ana!<br/>
+                I study at the Faculty of Electrical Engineering and Information Technologies and have created a personal website so that you'll get the chance to know more about me!<br/>
+                I really hope you'll enjoy your visit to this site!
+            </p>
+            <ul>
+                <li className="klasa">Some fun facts about me:</li>
+                <li>I used to study at Orce Nikolov.</li>
+                <li>I used to train karate.</li>
+                <li>Big surprise: I love The Karate Kid!</li>
+                <li>I enjoy singing and dancing to my favourite music when I am at home.</li>
+                <li>I love hanging out with my friends.</li>
+                <li>I enjoy going to concerts!</li>
+            </ul>
+        </div>
+    );
+}
+const root1=createRoot(document.getElementById('root2'));
+const root2=createRoot(document.getElementById('root1'));
+const root3=createRoot(document.getElementById('root'));
+
+root1.render(
+  <StrictMode>
+    <App1 />
+  </StrictMode>
+);
+
+root2.render(
+  <StrictMode>
+    <App2 />
+  </StrictMode>
+);
+
+root3.render(
+  <StrictMode>
+    <App3 />
+  </StrictMode>
+);
+
+</script>
+</html>
