@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="proektna_zadaca_2_strana_5.css">
+    <title>Ana-Form</title>
+</head>
+<body>
+  <div id="root2"></div>
+  <div id="root1"></div>
+</body>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+</script>
+<script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+let App1=function Komponenta1(){
+  return(
+    <div className="navbar">
+        <a href="proektna_zadaca_2_strana_1.html">Home</a>
+        <a href="http://localhost:4200/">Favourite things</a>
+        <a href="proektna_zadaca_2_strana_3.html">Gallery</a>
+        <a href="proektna_zadaca_2_strana_4.html">Blog</a>
+        <a href="proektna_zadaca_2_strana_5.html">Form</a>
+        <a href="proektna_zadaca_2_strana_6.html">Contact</a>
+    </div>
+  );
+}
+
+let App2=function Komponenta2(){
+    return(
+        <div>
+        <h1 className="title">
+            Please fill out this form so you can help us improve our website in the future!
+        </h1>
+        <form>
+            <p>
+                <label><strong>Name: </strong>
+                    <input name="name" type="text" size="25" maxlength="30"/>
+                </label>
+            </p>
+            <p>
+                <label><strong>Surname: </strong>
+                    <input name="surname" type="text" size="25" maxlength="30"/>
+                </label>
+            </p>
+            <p>
+                <strong>How did you find out about this website? </strong>
+                <label>
+                    Through friends 
+                    <input name="how" type="radio" value="friends"/>
+                </label>
+                <label>
+                    Through github 
+                    <input name="how" type="radio" value="github"/>
+                </label>
+                <label>
+                    Through search engine  
+                    <input name="how" type="radio" value="engine"/>
+                </label>
+                <label>
+                    Through link from another site 
+                    <input name="how" type="radio" value="link"/>
+                </label>
+                <label>
+                    Other 
+                    <input name="how" type="radio" value="other"/>
+                </label>
+            </p>
+            <p>
+                <strong>Things you liked about this site? </strong>
+                <label>
+                    Site design 
+                    <input name="things_you_liked" type="checkbox" value="design"/>
+                </label>
+                <label>
+                    Website images 
+                    <input name="things_you_liked" type="checkbox" value="website_images"/>
+                </label>
+                <label>
+                    Background images 
+                    <input name="things_you_liked" type="checkbox" value="background_images"/>
+                </label>
+                <label>
+                    Easy navigation 
+                    <input name="things_you_liked" type="checkbox" value="navigation"/>
+                </label>
+                <label>
+                    Interesting content 
+                    <input name="things_you_liked" type="checkbox" value="content"/>
+                </label>
+                <label>
+                    Interesting links 
+                    <input name="things_you_liked" type="checkbox" value="links"/>
+                </label>
+            </p>
+            <p>
+                <label><strong>How satisfied are you with the overall experience on our site? </strong>
+                    <select name="rating">
+                        <option selected>Very satisfied</option>
+                        <option>Satisfied</option>
+                        <option>Neutral</option>
+                        <option>Unsatisfied</option>
+                        <option>Very unsatisfied</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <strong>How likely are you to visit this site again in the future? </strong>
+                <select name="visit_again">
+                    <option selected>I will certainly come back!</option>
+                    <option>90%</option>
+                    <option>80%</option>
+                    <option>70%</option>
+                    <option>60%</option>
+                    <option>50%</option>
+                    <option>40%</option>
+                    <option>30%</option>
+                    <option>20%</option>
+                    <option>10%</option>
+                    <option>I wouldn't visit this website again!</option>
+                </select>
+            </p>
+            <p>
+                <strong>Would you recommend this site? </strong><br/>
+                <label>
+                    Yes 
+                    <input name="recommend" type="radio" value="yes"/>
+                </label>
+                <label>
+                    No 
+                    <input name="recommend" type="radio" value="no"/>
+                </label>
+            </p>
+            <p>
+                <label><strong>How do you think this website can be improved? </strong><br/>
+                    <textarea name="comments" placeholder="Enter your ideas!" rows="5" cols="40"></textarea>
+                </label>
+            </p>
+            <p>
+                <label><strong>Did you encounter any problems while on this website? </strong><br/>
+                    <textarea name="problems" placeholder="Any problems?" rows="5" cols="40"></textarea>
+                </label>
+            </p>
+            <p>
+                <input className="submit_clear" type="submit" value="Submit"/>
+                <input className="submit_clear" type="reset" value="Clear"/>
+            </p>
+        </form>
+        </div>
+    );
+}
+
+
+const root1=createRoot(document.getElementById('root2'));
+const root2=createRoot(document.getElementById('root1'));
+
+root1.render(
+  <StrictMode>
+    <App1 />
+  </StrictMode>
+);
+
+root2.render(
+  <StrictMode>
+    <App2 />
+  </StrictMode>
+);
+</script>
+</html>
