@@ -1,0 +1,13 @@
+body{
+    background: -webkit-gradient(linear, left top, right top,color-stop(0%, #02aab0), color-stop(99%, #00cdac));
+}
+.klasa{
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: #d0e2bc;
+    font-family: cursive;
+}
+.zgolemi_badge{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
