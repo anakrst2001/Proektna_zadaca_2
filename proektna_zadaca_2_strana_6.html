@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="proektna_zadaca_2_strana_6.css">
+  <title>Ana-Contact Information</title>
+</head>
+<body>
+  <div id="root2"></div>
+  <div id="root1"></div>
+  <div id="root"></div>
+</body>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react?dev",
+    "react-dom/client": "https://esm.sh/react-dom/client?dev"
+  }
+}
+</script>
+<script type="text/babel" data-type="module">
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+const card={
+  imgUrl1:"phone.jpg",
+  imgUrl2:"mail.jpg",
+  imageUrl3:"contact_us.png",
+  width_height:"100px",
+  width_height2:"300px",
+  alt1:"phone_logo",
+  alt2:"email logo",
+  alt3:"contact us logo"
+};
+
+let App1=function Komponenta1(){
+  return(
+    <div className="navbar">
+        <a href="proektna_zadaca_2_strana_1.html">Home</a>
+        <a href="http://localhost:4200/">Favourite things</a>
+        <a href="proektna_zadaca_2_strana_3.html">Gallery</a>
+        <a href="proektna_zadaca_2_strana_4.html">Blog</a>
+        <a href="proektna_zadaca_2_strana_5.html">Form</a>
+        <a href="proektna_zadaca_2_strana_6.html">Contact</a>
+    </div>
+  );
+}
+
+let App2=function Komponenta2(){
+    return(
+      <div className="contact">
+        <span className="contact-word contact-word-1">Contact </span>
+        <span className="contact-word contact-word-2">us!</span>
+      </div>
+    );
+}
+
+let App3=function Komponenta3(){
+    return(
+      <div>
+        <div className="float">
+            <img className="img" src={card.imgUrl1} alt={card.alt1} style={{ width:card.width_height, height: card.width_height}}/>
+            <div className="right">Phone number: 075687235</div>
+            <br/>
+            <img className="img" src={card.imgUrl2} alt={card.alt2} style={{ width:card.width_height, height: card.width_height}}/>
+            <div className="right extra">Email: anakrste2000@gmail.com</div>
+        </div>
+        <img className="img2" src={card.imageUrl3} alt={card.alt3} style={{ width:card.width_height2, height: card.width_height2}}/>
+    </div>
+    );
+}
+
+const root1=createRoot(document.getElementById('root2'));
+const root2=createRoot(document.getElementById('root1'));
+const root3=createRoot(document.getElementById('root'));
+root1.render(
+  <StrictMode>
+    <App1 />
+  </StrictMode>
+);
+root2.render(
+  <StrictMode>
+    <App2 />
+  </StrictMode>
+);
+root3.render(
+  <StrictMode>
+    <App3 />
+  </StrictMode>
+);
+</script>
+</html>
